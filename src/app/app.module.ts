@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TimelineComponent } from './-shared/timeline/timeline.component';
 import { SafeHtmlPipe } from './-pipes/safe-html.pipe';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SafeHtmlPipe } from './-pipes/safe-html.pipe';
     AboutComponent,
     ResumeComponent,
     TimelineComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
