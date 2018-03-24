@@ -7,20 +7,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" [ngClass]="{'active': isActive('home')}">
-                <a class="nav-link" routerLink="">
+                <a class="nav-link" routerLink="/">
                     <span class="oi oi-home" title="home" aria-hidden="true"></span>
                     Home
                     <span *ngIf="isActive('home')" class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item" [ngClass]="{'active': isActive('resume')}">
-                <a class="nav-link" routerLink="resume">Resume
+                <a class="nav-link" routerLink="/resume">Resume
                     <span *ngIf="isActive('resume')" class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item" [ngClass]="{'active': isActive('about')}">
-                <a class="nav-link" routerLink="about">About
+                <a class="nav-link" routerLink="/about">About
                     <span *ngIf="isActive('about')" class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': isActive('contact')}">
+                <a class="nav-link" routerLink="/contact">Contact
+                    <span *ngIf="isActive('contact')" class="sr-only">(current)</span>
                 </a>
             </li>
         </ul>

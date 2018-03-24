@@ -1,12 +1,31 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-          <section id="work-experience-timeline">
-              <app-s-timeline [experiences]="experiences"></app-s-timeline>
-            </section>
-      </div>
-      <div class="col-md-3">
-        One of two columns
+  <div class="row">
+    <div class="col-md-7">
+      <section id="work-experience-timeline">
+        <app-s-timeline [experiences]="experiences"></app-s-timeline>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Skills</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <div class="card-text">
+            <ul class="smaller-font">
+              <li *ngFor="let skill of skills;" [ngClass]="{'highlight': skill.asYouCanSee}">
+                {{ skill.name }}
+              </li>
+            </ul>
+          </div>
+          <div class="smaller-font">
+            <p>
+              <span class="highlight-legend"></span>
+              Technologies that I used on this site =)
+            </p>
+            <p>Please, take a look in the <a routerLink="/about" class="card-link">about</a> section to know more!</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
