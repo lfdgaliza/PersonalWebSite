@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
+import { TimelineComponent } from './-shared/timeline/timeline.component';
+import { SafeHtmlPipe } from './-pipes/safe-html.pipe';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ResumeComponent } from './resume/resume.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ResumeComponent
+    ResumeComponent,
+    TimelineComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,

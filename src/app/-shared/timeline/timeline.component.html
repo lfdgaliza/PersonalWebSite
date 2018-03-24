@@ -1,0 +1,41 @@
+<!-- credit: https://bootsnipp.com/snippets/featured/timeline-single-column -->
+{{test}}
+<div class="container">
+	<div *ngFor="let experience of experiences" class="qa-message-list" id="wallmessages">
+		<div class="message-item" id="m16">
+			<div class="message-inner">
+				<div class="message-head clearfix">
+					<div class="avatar pull-left">
+						<a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko">
+							<img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+						</a>
+					</div>
+					<div class="user-detail">
+						<h5 class="handle">{{ experience.title }}</h5>
+						<div class="post-meta">
+							<div class="asker-meta">
+								<span class="qa-message-what"></span>
+								<span class="qa-message-when">
+									<span class="qa-message-when-data">
+										{{ experience.startDate }}
+										-
+										{{ experience.endDate }}
+									</span>
+								</span>
+								<span class="qa-message-who">
+									<span class="qa-message-who-pad">at </span>
+									<span class="qa-message-who-data">
+										<a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko">{{ experience.company }}</a>
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="qa-message-content" [innerHtml]="experience.description | safeHtml">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
