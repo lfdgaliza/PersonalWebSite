@@ -11,25 +11,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" [ngClass]="{'active': isActive('home')}">
-                <a class="nav-link" routerLink="/home">
-                    <span class="oi oi-home" title="home" aria-hidden="true"></span>
-                    Home
-                    <span *ngIf="isActive('home')" class="sr-only">(current)</span>
+            <li class="nav-item" [ngClass]="{'active': isActive('about-me')}">
+                <a class="nav-link" routerLink="/about-me">
+                    <span class="oi oi-person" title="About me" aria-hidden="true"></span>
+                    About me
+                    <span *ngIf="isActive('about-me')" class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item" [ngClass]="{'active': isActive('resume')}">
-                <a class="nav-link" routerLink="/resume">Resume
+                <a class="nav-link" routerLink="/resume">
+                    <span class="oi oi-thumb-up" title="Resume" aria-hidden="true"></span>
+                    Resume
                     <span *ngIf="isActive('resume')" class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item" [ngClass]="{'active': isActive('about')}">
-                <a class="nav-link" routerLink="/about-this-project">About this project
-                    <span *ngIf="isActive('about')" class="sr-only">(current)</span>
+            <li class="nav-item" [ngClass]="{'active': isActive('about-this-project')}">
+                <a class="nav-link" routerLink="/about-this-project">
+                    <span class="oi oi-info" title="About this project" aria-hidden="true"></span>
+                    About this project
+                    <span *ngIf="isActive('about-this-project')" class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item" [ngClass]="{'active': isActive('contact')}">
-                <a class="nav-link" routerLink="/contact">Contact
+                <a class="nav-link" routerLink="/contact">
+                    <span class="oi oi-fullscreen-exit" title="Contact" aria-hidden="true"></span>
+                    Contact
                     <span *ngIf="isActive('contact')" class="sr-only">(current)</span>
                 </a>
             </li>
