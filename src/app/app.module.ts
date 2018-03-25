@@ -4,23 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TimelineComponent } from './-shared/timeline/timeline.component';
 import { SafeHtmlPipe } from './-pipes/safe-html.pipe';
 import { ContactComponent } from './contact/contact.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { AboutThisProjectComponent } from './about-this-project/about-this-project.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
     ResumeComponent,
     TimelineComponent,
     SafeHtmlPipe,
-    ContactComponent
+    ContactComponent,
+    AboutMeComponent,
+    AboutThisProjectComponent
   ],
   imports: [
     BrowserModule,
