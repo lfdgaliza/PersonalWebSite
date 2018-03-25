@@ -11,10 +11,21 @@
           <h5 class="card-title">Skills</h5>
           <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
           <div class="card-text">
-            <ul class="smaller-font">
-              <li *ngFor="let skill of skills;" [ngClass]="{'highlight': skill.asYouCanSee}">
-                {{ skill.name }}
-              </li>
+            <ul class="smaller-font skills-list">
+              <ng-container *ngFor="let skill of skills;">
+                <ng-container *ngIf="skill.asYouCanSee; then using else notUsing"></ng-container>
+                <ng-template #notUsing>
+                  <li>
+                    {{ skill.name }}
+                  </li>
+                </ng-template>
+                <ng-template #using>
+                  <li popover="This technology was used in this project" class="highlight">
+                    {{ skill.name }}
+                  </li>
+                </ng-template>
+                <br />
+              </ng-container>
             </ul>
           </div>
           <div class="smaller-font text-justify">
@@ -35,7 +46,8 @@
             <p>UNIBRATEC, Recife, PE, Brazil.</p>
             <p>2016 - 2018</p>
             <p class="smaller-font text-justify">
-              I had to stop this program in the last course (Android) due to delays from the institution, since my trip to Australia was already marked.
+              I had to stop this program in the last course (Android) due to delays from the institution, since my trip to Australia was
+              already marked.
             </p>
           </div>
         </div>
