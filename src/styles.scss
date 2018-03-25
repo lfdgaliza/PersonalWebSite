@@ -2,7 +2,7 @@ $highlight-color-foreground: #DB1E60;
 $highlight-color-background: #FF80C2;
 
 .highlight {
-    color:  $highlight-color-foreground;
+    color:  $highlight-color-foreground !important;
 }
 
 .highlight-legend {
@@ -15,4 +15,8 @@ $highlight-color-background: #FF80C2;
 
 .smaller-font {
     font-size: .8em;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
 }
