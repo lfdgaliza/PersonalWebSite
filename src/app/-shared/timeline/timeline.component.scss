@@ -5,6 +5,12 @@
     position: relative;
 }
 
+@media (min-width: 992px) {
+    .message-item {
+        margin-left: 0px;
+    }
+  }
+
 .message-item .message-inner {
     background: #fff;
     border: 1px solid #ddd;
