@@ -1,7 +1,10 @@
-nav{
-    margin-bottom: 1em;
+.active * {
+    color: #FF5133 !important;
 }
 
-.active * {
-    color: #DB1E00 !important;
+.container {
+    margin-top: 2rem;
+    padding: 3rem 0 3rem 0;
+    background-color: white;
+    width: 90%;
 }

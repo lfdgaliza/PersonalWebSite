@@ -1,8 +1,13 @@
 $highlight-color-foreground: #DB1E00;
 $highlight-color-background: #FC9C7E;
 
+body {
+    background-color: rgb(223, 223, 223);
+    padding-bottom: 2rem;
+}
+
 .highlight {
-    color:  $highlight-color-foreground !important;
+    color: $highlight-color-foreground !important;
 }
 
 .highlight-legend {
@@ -19,4 +24,16 @@ $highlight-color-background: #FC9C7E;
 
 .margin-bottom {
     margin-bottom: 1rem;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.75);
+}
+
+.light-shadow {
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
 }
