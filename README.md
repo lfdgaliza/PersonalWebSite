@@ -1,27 +1,16 @@
-# Galiza
+# Galiza's experimental project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+The principal goal here is to apply as most as possible all technologies described in my Resume.
 
-## Development server
+Also, as a roadmap, I want to make some articles about my experience in doing that in order to explain to other people how to use them.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Used technologies until now
 
-## Code scaffolding
+- [Bootstrap 4](https://getbootstrap.com/) & [ngx-bootstrap](https://www.npmjs.com/package/ngx-bootstrap)
+- [Angular 5](http://angular.io/) `  + TypeScript`
+- HTML, CSS & JavaScript
+- [GitHub](http://github.com)
+- [Aws](http://aws.amazon.com)
+    - S3 `(Hosting)`
+    - Route 53 `(To handle the domain)`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
