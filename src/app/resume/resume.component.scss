@@ -7,3 +7,9 @@
         cursor: help;
     }
 }
+
+@media (max-width: 992px) {
+    .card {
+        margin: 1rem;
+    }
+  }
