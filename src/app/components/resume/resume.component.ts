@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Experience } from '../-models/experience.model';
-import { WorkExperienceService } from '../-services/work-experience.service';
-import { Skill } from '../-models/skill.model';
 import { Chart } from 'chart.js';
+import { WorkExperienceService } from '../../services/work-experience.service';
+import { Experience } from '../../models/experience.model';
+import { Skill } from '../../models/skill.model';
 
 @Component({
   selector: 'app-resume',

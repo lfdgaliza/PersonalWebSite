@@ -1,4 +1,4 @@
-import { Skill } from "../-models/skill.model";
+import { Skill } from "../../models/skill.model";
 
 export const SKILLS: Skill[] = [
     new Skill("C#, .Net standard and Core"),
