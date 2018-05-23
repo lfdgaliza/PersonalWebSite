@@ -10,7 +10,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { AboutThisProjectComponent } from './components/about-this-project/about-this-project.component';
 import { TimelineComponent } from './components/-shared/timeline/timeline.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { PaperComponent } from './components/-shared/paper/paper.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     SafeHtmlPipe,
     ContactComponent,
     AboutMeComponent,
-    AboutThisProjectComponent
+    AboutThisProjectComponent,
+    PaperComponent
   ],
   imports: [
     BrowserModule,

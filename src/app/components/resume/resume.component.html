@@ -1,92 +1,94 @@
-<div class="row justify-content-lg-center">
-  <div class="col-lg-7 margin-bottom">
-    <section id="work-experience-timeline">
-      <app-s-timeline [experiences]="experiences"></app-s-timeline>
-    </section>
-  </div>
-  <div class="col-lg-4">
-    <div class="card margin-bottom">
-      <div class="card-body">
-        <h5 class="card-title">Download Resume</h5>
-        <div class="row justify-content-sm-center">
-          <div class="col-sm-auto margin-bottom">
-            <a href="assets/resume/luiz.galiza.resume.pdf" target="_blank">
-              <img src="assets/img/ico/pdf.png" /> PDF Version
-            </a>
+<gl-paper>
+  <div class="row justify-content-lg-center">
+    <div class="col-lg-7 margin-bottom">
+      <section id="work-experience-timeline">
+        <gl-timeline [experiences]="experiences"></gl-timeline>
+      </section>
+    </div>
+    <div class="col-lg-4">
+      <div class="card margin-bottom">
+        <div class="card-body">
+          <h5 class="card-title">Download Resume</h5>
+          <div class="row justify-content-sm-center">
+            <div class="col-sm-auto margin-bottom">
+              <a href="assets/resume/luiz.galiza.resume.pdf" target="_blank">
+                <img src="assets/img/ico/pdf.png" /> PDF Version
+              </a>
+            </div>
+            <div class="col-sm-auto margin-bottom">
+              <a href="assets/resume/luiz.galiza.resume.docx" target="_blank">
+                <img src="assets/img/ico/word.png" /> Word Version
+              </a>
+            </div>
           </div>
-          <div class="col-sm-auto margin-bottom">
-            <a href="assets/resume/luiz.galiza.resume.docx" target="_blank">
-              <img src="assets/img/ico/word.png" /> Word Version
-            </a>
+        </div>
+      </div>
+      <div class="card margin-bottom">
+        <div class="card-body">
+          <h5 class="card-title">Skills</h5>
+          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+          <div class="card-text">
+            <ul class="smaller-font skills-list">
+              <ng-container *ngFor="let skill of skills;">
+                <ng-container *ngIf="skill.asYouCanSee; then using else notUsing"></ng-container>
+                <ng-template #notUsing>
+                  <li>
+                    {{ skill.name }}
+                  </li>
+                </ng-template>
+                <ng-template #using>
+                  <li popover="This technology was used in this project" class="highlight">
+                    {{ skill.name }}
+                  </li>
+                </ng-template>
+                <br />
+              </ng-container>
+            </ul>
+          </div>
+          <div class="smaller-font text-justify">
+            <p>
+              <span class="highlight-legend"></span>
+              Technologies that were applied on this site =)
+            </p>
+            <p>Please, take a look in the
+              <a routerLink="/about-this-project" class="card-link">about this project</a> section to know more!</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card margin-bottom">
-      <div class="card-body">
-        <h5 class="card-title">Skills</h5>
-        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-        <div class="card-text">
-          <ul class="smaller-font skills-list">
-            <ng-container *ngFor="let skill of skills;">
-              <ng-container *ngIf="skill.asYouCanSee; then using else notUsing"></ng-container>
-              <ng-template #notUsing>
-                <li>
-                  {{ skill.name }}
-                </li>
-              </ng-template>
-              <ng-template #using>
-                <li popover="This technology was used in this project" class="highlight">
-                  {{ skill.name }}
-                </li>
-              </ng-template>
-              <br />
-            </ng-container>
-          </ul>
-        </div>
-        <div class="smaller-font text-justify">
-          <p>
-            <span class="highlight-legend"></span>
-            Technologies that were applied on this site =)
-          </p>
-          <p>Please, take a look in the
-            <a routerLink="/about-this-project" class="card-link">about this project</a> section to know more!</p>
+      <div class="card margin-bottom">
+        <div class="card-body">
+          <h5 class="card-title">Software Engineering</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Postgraduate</h6>
+          <div class="card-text">
+            <p>UNIBRATEC, Recife, PE, Brazil.</p>
+            <p>2016 - 2018</p>
+            <p class="smaller-font text-justify">
+              I had to stop this program in the last course (Android) due to delays from the institution, since my trip to Australia was
+              already marked.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card margin-bottom">
-      <div class="card-body">
-        <h5 class="card-title">Software Engineering</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Postgraduate</h6>
-        <div class="card-text">
-          <p>UNIBRATEC, Recife, PE, Brazil.</p>
-          <p>2016 - 2018</p>
-          <p class="smaller-font text-justify">
-            I had to stop this program in the last course (Android) due to delays from the institution, since my trip to Australia was
-            already marked.
-          </p>
+      <div class="card margin-bottom">
+        <div class="card-body">
+          <h5 class="card-title">Systems Analysis and Development </h5>
+          <h6 class="card-subtitle mb-2 text-muted">Graduate</h6>
+          <div class="card-text">
+            <p>UNIBRATEC, Recife, PE, Brazil.</p>
+            <p>2008 - 2011</p>
+            <p class="smaller-font text-justify">
+              My conclusion work was a game for web browsers written mainly in jQuery
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card margin-bottom">
-      <div class="card-body">
-        <h5 class="card-title">Systems Analysis and Development </h5>
-        <h6 class="card-subtitle mb-2 text-muted">Graduate</h6>
-        <div class="card-text">
-          <p>UNIBRATEC, Recife, PE, Brazil.</p>
-          <p>2008 - 2011</p>
-          <p class="smaller-font text-justify">
-            My conclusion work was a game for web browsers written mainly in jQuery
-          </p>
+      <div class="card margin-bottom">
+        <div class="card-body">
+          <h5 class="card-title">English Fluency</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Work in Progress</h6>
+          <canvas id="canvas">{{ chart }}</canvas>
         </div>
-      </div>
-    </div>
-    <div class="card margin-bottom">
-      <div class="card-body">
-        <h5 class="card-title">English Fluency</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Work in Progress</h6>
-        <canvas id="canvas">{{ chart }}</canvas>
       </div>
     </div>
   </div>
-</div>
+</gl-paper>

@@ -3,7 +3,7 @@ import { Experience } from '../../../models/experience.model';
 
 
 @Component({
-  selector: 'app-s-timeline',
+  selector: 'gl-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss']
 })

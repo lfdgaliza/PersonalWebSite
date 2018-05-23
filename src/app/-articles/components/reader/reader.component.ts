@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GitHubService } from '../../services/git-hub.service';
 
 @Component({
-  selector: 'app-reader',
+  selector: 'gl-reader',
   templateUrl: './reader.component.html',
   styleUrls: ['./reader.component.scss'],
   providers: [GitHubService]

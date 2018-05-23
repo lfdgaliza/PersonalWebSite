@@ -5,7 +5,7 @@ import { Experience } from '../../models/experience.model';
 import { Skill } from '../../models/skill.model';
 
 @Component({
-  selector: 'app-resume',
+  selector: 'gl-resume',
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
   providers: [WorkExperienceService]
