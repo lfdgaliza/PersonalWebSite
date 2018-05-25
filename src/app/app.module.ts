@@ -13,6 +13,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 import { AboutThisProjectComponent } from './components/pages/about-this-project/about-this-project.component';
 import { PaperComponent } from './components/paper/paper.component';
+import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PaperComponent } from './components/paper/paper.component';
     BrowserModule,
     AppRoutingModule,
     PopoverModule.forRoot(),
+    MarkdownModule.forRoot(),
     HttpClientModule
   ],
   providers: [],
