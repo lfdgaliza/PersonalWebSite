@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'gl-paper',
@@ -9,6 +9,8 @@ export class PaperComponent implements OnInit {
 
   constructor() { }
 
+
+  //@Input() side
   ngOnInit() {
   }
 

@@ -17,6 +17,6 @@ export class GitHubService {
           data => console.log(data),
           error => console.error(error)
         )
-      );;
+      );
   }
 }
