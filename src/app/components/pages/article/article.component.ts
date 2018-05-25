@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { GitHubService } from '../../services/git-hub.service';
+import { GitHubService } from '../../../services/git-hub.service';
 
 @Component({
-  selector: 'gl-reader',
-  templateUrl: './reader.component.html',
-  styleUrls: ['./reader.component.scss'],
+  selector: 'gl-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.scss'],
   providers: [GitHubService]
 })
-export class ReaderComponent implements OnInit {
+export class ArticleComponent implements OnInit {
 
   constructor(private _gitHubService: GitHubService) { }
   public article: string;

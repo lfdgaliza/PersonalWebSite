@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Experience } from '../../../models/experience.model';
-
+import { Experience } from '../../models/experience.model';
 
 @Component({
   selector: 'gl-timeline',

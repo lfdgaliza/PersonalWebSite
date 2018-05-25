@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ResumeComponent } from './components/resume/resume.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { AboutThisProjectComponent } from './components/about-this-project/about-this-project.component';
+import { AboutMeComponent } from './components/pages/about-me/about-me.component';
+import { ResumeComponent } from './components/pages/resume/resume.component';
+import { AboutThisProjectComponent } from './components/pages/about-this-project/about-this-project.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { ArticleComponent } from './components/pages/article/article.component';
+
 
 const routes: Routes = [
   { path: "", redirectTo: "about-me", pathMatch: 'full' },
@@ -11,7 +13,7 @@ const routes: Routes = [
   { path: "resume", component: ResumeComponent },
   { path: "about-this-project", component: AboutThisProjectComponent },
   { path: "contact", component: ContactComponent },
-  { path: "articles", loadChildren: 'app/-articles/articles.module#ArticlesModule' }
+  { path: "articles", component: ArticleComponent }
 ];
 
 @NgModule({
