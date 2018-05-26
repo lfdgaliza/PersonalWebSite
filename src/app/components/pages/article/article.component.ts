@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitHubService } from '../../../services/git-hub.service';
 import { ArticlesMenuService } from '../../../services/articles-menu.service';
+import { BaseMenuItem } from '../../../models/base/base-menu-item.model';
 
 @Component({
   selector: 'gl-article',
@@ -10,22 +11,20 @@ import { ArticlesMenuService } from '../../../services/articles-menu.service';
 })
 export class ArticleComponent implements OnInit {
 
+  public article: string;
+  public menuItems: BaseMenuItem[];
+
   constructor(
     private _gitHubService: GitHubService,
     private _articlesMenuService: ArticlesMenuService) { }
-  public article: string;
+
   ngOnInit() {
     // this._gitHubService.getArticle().subscribe(result => {
     //   this.article = result;
     // });
 
-    this._articlesMenuService.get().subscribe(result => {
-
-      result.forEach(r => {
-        console.log(r.Path);
-      });
-
-
+    this._articlesMenuService.getAll().subscribe(menuItems => {
+      this.menuItems = menuItems;
     });
   }
 

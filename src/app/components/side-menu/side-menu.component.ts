@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { BaseMenuItem } from '../../models/base/base-menu-item.model';
 
 @Component({
   selector: 'gl-side-menu',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideMenuComponent implements OnInit {
 
-  constructor() { }
+  @Input() items: BaseMenuItem[];
+
+  constructor() {
+
+
+  }
+
+
 
   ngOnInit() {
+
   }
 
 }
