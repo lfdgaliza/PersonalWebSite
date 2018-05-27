@@ -1,5 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark light-shadow">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
     <a class="navbar-brand" href="#">
         <span style="font-family: 'Montserrat', sans-serif;">L Filipe D Galiza</span>
@@ -11,28 +11,35 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" [ngClass]="{'active': isActive('about-me')}">
+            <li class="nav-item" [ngClass]="{'active btn-secondary': isActive('about-me')}">
                 <a class="nav-link" routerLink="/about-me">
                     <span class="oi oi-person" title="About me" aria-hidden="true"></span>
                     About me
                     <span *ngIf="isActive('about-me')" class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item" [ngClass]="{'active': isActive('resume')}">
+            <li class="nav-item" [ngClass]="{'active btn-secondary': isActive('resume')}">
                 <a class="nav-link" routerLink="/resume">
                     <span class="oi oi-thumb-up" title="Resume" aria-hidden="true"></span>
                     Resume
                     <span *ngIf="isActive('resume')" class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item" [ngClass]="{'active': isActive('about-this-project')}">
+            <li class="nav-item" [ngClass]="{'active btn-secondary': isActive('about-this-project')}">
                 <a class="nav-link" routerLink="/about-this-project">
                     <span class="oi oi-info" title="About this project" aria-hidden="true"></span>
                     About this project
                     <span *ngIf="isActive('about-this-project')" class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item" [ngClass]="{'active': isActive('contact')}">
+            <li class="nav-item" [ngClass]="{'active btn-secondary': isActive('articles')}">
+                <a class="nav-link" routerLink="/articles">
+                    <span class="oi oi-lightbulb" title="Articles" aria-hidden="true"></span>
+                    Articles
+                    <span *ngIf="isActive('articles')" class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active btn-secondary': isActive('contact')}">
                 <a class="nav-link" routerLink="/contact">
                     <span class="oi oi-fullscreen-exit" title="Contact" aria-hidden="true"></span>
                     Contact

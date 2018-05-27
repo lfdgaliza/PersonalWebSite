@@ -1,13 +1,22 @@
-<nav class="side-menu">
-  <ul>
-    <ng-template #recursiveMenu let-items>
-      <li *ngFor="let item of items">
-        {{item.Label}}
-        <ul *ngIf="item.Children.length > 0">
-          <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: item.Children }"></ng-container>
-        </ul>
-      </li>
-    </ng-template>
-    <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: items }"></ng-container>
-  </ul>
+<nav class="">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navSidebar" aria-controls="navSidebar"
+    aria-expanded="false" aria-label="Toggle navigation">
+    Artigos
+  </button>
+
+  <div class="collapse navbar-collapse" id="navSidebar">
+    <ul>
+      <ng-template #recursiveMenu let-items>
+        <li *ngFor="let item of items">
+          {{item.Label}}
+          <ul *ngIf="item.Children.length > 0">
+            <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: item.Children }"></ng-container>
+          </ul>
+        </li>
+      </ng-template>
+      <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: items }"></ng-container>
+    </ul>
+
+  </div>
 </nav>

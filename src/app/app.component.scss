@@ -1,10 +1,32 @@
-.active * {
-    color: #FF5133 !important;
+.navbar {
+    
+    top:0;
+    width: 100%;
+    z-index: 99999;
+    opacity: .96;
 }
 
-.container {
-    
+.active * {
+    color: lime;
+
+    .oi-person {
+        color: orange;
+    }
+
+    .oi-lightbulb {
+        color: yellow !important;
+    }
+
+    .oi-thumb-up {
+        color: turquoise;
+    }
+
+    .oi-fullscreen-exit {
+        color: coral;
+    }
 }
+
+.container {}
 
 .view-source {
     position: fixed;
