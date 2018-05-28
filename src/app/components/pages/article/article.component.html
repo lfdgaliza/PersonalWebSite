@@ -1,6 +1,14 @@
-<gl-side-menu [items]="menuItems">
-</gl-side-menu>
 
 <gl-paper>
-  <markdown [data]="article"></markdown>
+    
+    
+  <div class="row">
+    <div class="col-md-3">
+      <gl-side-menu [items]="menuItems" (itemSelected)="showArticle($event)">
+      </gl-side-menu>
+    </div>
+    <div class="col-md-8">
+      <markdown [data]="article"></markdown>
+    </div>
+  </div>
 </gl-paper>

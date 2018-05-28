@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { BaseMenuItem } from '../../models/base/base-menu-item.model';
 
 @Component({
@@ -9,13 +9,17 @@ import { BaseMenuItem } from '../../models/base/base-menu-item.model';
 export class SideMenuComponent implements OnInit {
 
   @Input() items: BaseMenuItem[];
+  @Output() itemSelected = new EventEmitter<BaseMenuItem>();
 
-  constructor() {
+  constructor() {}
 
-
+  getIdCollapsibleMenu(item: BaseMenuItem) {
+    return "item-collapsible-menu-" + item.ItemMenuId;
   }
 
-
+  showArticle(item: BaseMenuItem) {
+    this.itemSelected.emit(item);
+  }
 
   ngOnInit() {
 
