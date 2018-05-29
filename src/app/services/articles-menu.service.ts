@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { ArticleMenuItem } from '../models/article-menu-item.model';
+import 'rxjs/add/operator/map';
 
 
 @Injectable()

@@ -11,7 +11,7 @@ export class GitHubService {
   constructor(private _http: HttpClient) { }
 
   getArticle(item: ArticleMenuItem): Observable<string> {
-    let url = environment.githubBaseUrl + "/" + item.Path;
+    let url = environment.githubRawBaseUrl + "/" + item.Path;
 
     return this._http.get(url, { responseType: 'text' });
   }
