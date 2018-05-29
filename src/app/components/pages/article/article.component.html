@@ -1,14 +1,24 @@
-
 <gl-paper>
   <div class="row">
     <div class="col-md-3">
-      <div class="menu-title">Menu</div>
+      <gl-loading-bar *ngIf="menuLoading"></gl-loading-bar>
+      <div id="btnSideMenu" class="h5" data-toggle="collapse" href="#sideMenu">
+        <span class="oi oi-menu"></span> Menu</div>
       <hr>
-      <gl-side-menu [items]="menuItems" (itemSelected)="showArticle($event)">
-      </gl-side-menu>
+      <div class="collapse show" id="sideMenu">
+        <gl-side-menu [items]="menuItems" (itemSelected)="showArticle($event)">
+        </gl-side-menu>
+      </div>
+
     </div>
     <div class="col-md-8">
+      <gl-loading-bar *ngIf="articleLoading"></gl-loading-bar>
       <markdown [data]="article"></markdown>
+      <hr>
+      <a [href]="goToSource" target="_blank">
+        <img src="assets/img/ico/octocat-32.png" /> Go Go Go to GitHub!
+        <span class="oi oi-external-link"></span>
+      </a>
     </div>
   </div>
 </gl-paper>

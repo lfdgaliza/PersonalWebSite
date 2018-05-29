@@ -16,6 +16,9 @@ export class ArticleComponent implements OnInit {
 
   public article: string;
   public menuItems: ArticleMenuItem[];
+  public articleLoading: boolean = false;
+  public menuLoading: boolean = false;
+  public goToSource: string;
 
   constructor(
     private _gitHubService: GitHubService,
@@ -23,26 +26,23 @@ export class ArticleComponent implements OnInit {
     private _markdownService: MarkdownService) { }
 
   ngOnInit() {
-
+    this.menuLoading = true;
     this._articlesMenuService.getAll().subscribe(menuItems => {
       this.menuItems = menuItems;
+      this.menuLoading = false;
+      this.showArticle(<ArticleMenuItem>this.menuItems[0].Children[0].Children[0]);
     });
   }
 
   showArticle(item: ArticleMenuItem) {
-
-    console.log(item);
-
-
-
+    this.goToSource = undefined;
+    this.articleLoading = true;
+    let indexFirstBarOfItemPath = item.Path.indexOf("/");
 
     this._markdownService.renderer.image = (href: string, title: string, text: string) => {
-      console.log(href, title, text);
-
       if (href.startsWith("/")) {
-        let indexFirstBar = item.Path.indexOf("/");
-        let repoName = item.Path.substring(0, indexFirstBar);
-        href = `${environment.githubBaseUrl}/${repoName}/master${href}`;
+        let repoName = item.Path.substring(0, indexFirstBarOfItemPath);
+        href = `${environment.githubRawBaseUrl}/${repoName}/master${href}`;
       }
 
       return `<img src="${href}" class="img-fluid" />`;
@@ -50,7 +50,18 @@ export class ArticleComponent implements OnInit {
 
     this._gitHubService.getArticle(item).subscribe(result => {
       this.article = result;
+      this.articleLoading = false;
+      this.generateGoToSourceUrl(item, indexFirstBarOfItemPath);
     });
   }
 
+
+  private generateGoToSourceUrl(item: ArticleMenuItem, indexFirstBarOfItemPath: number) {
+    // insert tree
+    this.goToSource = `${item.Path.slice(0, indexFirstBarOfItemPath)}/tree${item.Path.slice(indexFirstBarOfItemPath)}`;
+    // remove readme at the end
+    this.goToSource = this.goToSource.slice(0, this.goToSource.lastIndexOf("/"));
+    // append base url
+    this.goToSource = `${environment.githubBaseUrl}/${this.goToSource}`;
+  }
 }

@@ -1,0 +1,19 @@
+$size: 300%;
+.loading {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #75b1ff, #ffffff, #ffffff, #ffffff);
+    background-size: $size $size;
+    animation: AnimationName 5s ease infinite;
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+}

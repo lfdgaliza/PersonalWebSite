@@ -14,6 +14,7 @@ import { AboutMeComponent } from './components/pages/about-me/about-me.component
 import { AboutThisProjectComponent } from './components/pages/about-this-project/about-this-project.component';
 import { PaperComponent } from './components/paper/paper.component';
 import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
+import { LoadingBarComponent } from './components/loading-bar/loading-bar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
     AboutThisProjectComponent,
     PaperComponent,
     ArticleComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    LoadingBarComponent
   ],
   imports: [
     BrowserModule,
